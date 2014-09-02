@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'comments/create'
+
+  get 'comments/update'
+
+  get 'comments/new'
+
+  resources :posts
+
   root 'static_pages#home'
 
   get '/contact', to: 'static_pages#contact', as: :contact
